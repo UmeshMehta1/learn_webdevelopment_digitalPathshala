@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        background-color: red;
+      }
+
+      /* .box-1 {
+        background-color: blue;
+      } */
+
+      .container {
+        background-color: lightgray;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-template-areas:
+          "header header header"
+          "sidebar content-1 content-1"
+          "sidebar content-2 content-3"
+          "footer footer footer";
+
+        gap: 2px;
+      }
+
+      .box-1 {
+        /* grid-row-start: 1;
+        grid-row-end: 4; */
+        /* 
+        grid-column-start: 2;
+        grid-column-end: 4; */
+
+        /* grid-row: 1 / span 4;
+        grid-column: 1/4; */
+        grid-area: header;
+        background-color: blue;
+      }
+
+      .box-2 {
+        grid-area: sidebar;
+      }
+
+      .box-3 {
+        grid-area: content-1;
+      }
+
+      .box-4 {
+        grid-area: content-2;
+      }
+
+      .box-5 {
+        grid-area: content-3;
+      }
+
+      .box-6 {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-1">Header</div>
+      <div class="box box-2">sidebar</div>
+      <div class="box box-3">content 1</div>
+      <div class="box box-4">content 2</div>
+      <div class="box box-5">content 3</div>
+      <div class="box box-6">footer</div>
+    </div>
+  </body>
+</html>
