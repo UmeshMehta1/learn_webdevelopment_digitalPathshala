@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        margin: 2px;
+      }
+
+      .container {
+        display: flex;
+      }
+      body {
+        background-color: red;
+      }
+
+      @media only screen and (max-width: 500px) {
+        body {
+          background-color: blue;
+        }
+
+        .container {
+          flex-direction: column;
+        }
+      }
+
+      @media only screen and (max-width: 200px) {
+        .box {
+          margin: 30px;
+        }
+      }
+
+      button {
+        background-color: green;
+        opacity: 0.6;
+        transition: 5s;
+      }
+
+      button:hover {
+        opacity: 4;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button>click me</button>
+    </div>
+  </body>
+</html>
